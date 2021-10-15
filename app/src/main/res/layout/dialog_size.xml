@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:minWidth="280dp">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_standard"
+        android:layout_marginStart="@dimen/margin_standard"
+        android:layout_marginTop="@dimen/margin_small"
+        android:padding="@dimen/margin_small"
+        android:text="Выбрать размер"
+        android:textColor="@color/black"
+        android:textSize="@dimen/margin_standard"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etFrom"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_standard"
+        android:background="@drawable/border_edittext_1"
+        android:hint="512"
+        android:inputType="number"
+        android:padding="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintStart_toEndOf="@id/etFrom"
+    android:text="x"
+    android:id="@+id/tvX"
+    app:layout_constraintTop_toTopOf="@id/etFrom"
+    app:layout_constraintBottom_toBottomOf="@id/etFrom"
+    android:layout_marginStart="4dp" />
+    <EditText
+        android:id="@+id/etTo"
+        android:layout_width="80dp"
+        android:inputType="number"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_standard"
+        android:background="@drawable/border_edittext_1"
+        android:hint="512"
+        android:padding="8dp"
+        app:layout_constraintStart_toEndOf="@id/etFrom"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+
+    <TextView
+        android:id="@+id/btnPickSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_standard"
+        android:layout_marginEnd="@dimen/margin_standard"
+        android:layout_marginBottom="@dimen/margin_standard"
+        android:text="@string/btnGiveSize"
+        android:textSize="15dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:padding="@dimen/margin_small"
+        android:textStyle="bold"
+        android:textColor="@color/teal_700"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etFrom"
+        android:focusable="true" />
+
+    <TextView
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_standard"
+        android:layout_marginEnd="@dimen/margin_standard"
+        android:text="@string/cancel"
+        android:textSize="15dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:textStyle="bold"
+        android:padding="@dimen/margin_small"
+        android:textColor="@color/teal_700"
+        app:layout_constraintEnd_toStartOf="@id/btnPickSize"
+        app:layout_constraintTop_toBottomOf="@id/etFrom"
+        android:focusable="true" />
+</androidx.constraintlayout.widget.ConstraintLayout>

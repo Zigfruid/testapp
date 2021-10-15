@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#391661"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/gd1"
+        app:layout_constraintGuide_percent="0.48"
+        android:orientation="horizontal"/>
+    <RelativeLayout
+        android:id="@+id/spinner"
+        android:layout_marginTop="@dimen/margin_standard"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="@dimen/margin_standard"
+        android:layout_marginEnd="@dimen/margin_standard"
+        android:background="@drawable/spinner_border"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Spinner
+            android:id="@+id/spinner2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:spinnerMode="dropdown"
+            android:textColor="@color/black" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_drop_down" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:id="@+id/ivContainer1"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginStart="@dimen/margin_standard"
+        android:layout_marginEnd="@dimen/margin_standard"
+        android:layout_marginBottom="@dimen/margin_standard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinner"
+        app:layout_constraintBottom_toBottomOf="@id/gd1"
+        />
+
+    <RelativeLayout
+        android:id="@+id/spinnerSecond"
+        android:layout_width="0dp"
+        android:layout_marginTop="@dimen/margin_standard"
+        android:layout_height="40dp"
+        android:layout_marginStart="@dimen/margin_standard"
+        android:layout_marginEnd="@dimen/margin_standard"
+        android:background="@drawable/spinner_border"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/gd1">
+
+        <Spinner
+            android:id="@+id/spinner2sec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:spinnerMode="dropdown"
+            android:textColor="@color/black" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_drop_down" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:id="@+id/ivContainer2"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginStart="@dimen/margin_standard"
+        android:layout_marginEnd="@dimen/margin_standard"
+        android:layout_marginBottom="@dimen/margin_standard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinnerSecond"
+        app:layout_constraintBottom_toTopOf="@id/btnGenerate"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:id="@+id/btnSize"
+        android:layout_height="wrap_content"
+        android:text="Size"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:textAllCaps="false"
+        android:layout_marginStart="@dimen/margin_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:text="Generate"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:textAllCaps="false"
+        android:id="@+id/btnGenerate"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/btnSize"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Speed"
+        android:id="@+id/tv1"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@id/btnGenerate"
+        android:layout_marginStart="@dimen/margin_standard"
+        app:layout_constraintTop_toTopOf="@id/btnGenerate"
+        app:layout_constraintBottom_toBottomOf="@id/btnGenerate"
+    />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/btnGenerate"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_small"
+        app:layout_constraintStart_toEndOf="@id/tv1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btnGenerate"
+       />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

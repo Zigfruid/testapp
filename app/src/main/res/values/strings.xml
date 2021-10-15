@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">testapp</string>
+    <string name="cancel">назад</string>
+    <string name="btnGiveSize">выбрать размер</string>
+    <string name="fill_fields">Заполните поля!</string>
+</resources>
